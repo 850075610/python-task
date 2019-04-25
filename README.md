@@ -1,2 +1,2 @@
 # python-task
-python exercise
+python exercises
