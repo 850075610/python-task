@@ -61,9 +61,9 @@ def main():
     print("\nIhre jährlichen Kosten")
     print("**************************")
     print("Ihr Jahresverbrauch: " + '{0:.1f}'.format(verbrauch) + " kWh")
-    print("Gesamtpreis (Netto): " + '{0: .13f}'.format(
+    print("Gesamtpreis (Netto): " + '{0:.13f}'.format(
         Grundpreis_in_Netto + Arbeitspreis_in_Netto * verbrauch / 100) + " Euro")
-    print("Gesamtpreis (zzgl. 19% MwSt): " + '{0: .13f}'.format(
+    print("Gesamtpreis (zzgl. 19% MwSt): " + '{0:.13f}'.format(
         Grundpreis_in_Brutto + Arbeitspreis_in_Brutto * verbrauch / 100) + " Euro")
 if __name__ == '__main__':
     main()
