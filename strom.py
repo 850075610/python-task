@@ -38,7 +38,7 @@ def main():
     if verbrauch < 1500:
         tarif = "radio-lightning"
         radio_lightning()
-    elif verbrauch >= 1500 & verbrauch <= 3500:
+    elif verbrauch >= 1500 and verbrauch <= 3500:
         tarif = "easy-green"
         easy_green()
 
