@@ -13,7 +13,6 @@ def euclidean(one, other):
         return other
     elif other == 0:
         return one
-    return
 
 
 def main():
