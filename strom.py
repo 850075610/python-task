@@ -29,41 +29,54 @@ def electrical_short():
 def more_tarife():
     pass
 
+
 def main():
     MwSt = 0.19
     print("Stromtarifrechner")
-    verbrauch = int(input("Dein Jahresstromverbrauch (in kWh)\n "))
-    print("\nIhr passender Stromtarif lautet:")
-    print("--------------------------------")
-    if verbrauch < 1500:
-        tarif = "radio-lightning"
-        radio_lightning()
-    elif verbrauch >= 1500 and verbrauch <= 3500:
-        tarif = "easy-green"
-        easy_green()
+    while True:
+        try:
+            verbrauch = float(input("\nDein Jahresstromverbrauch (in kWh)\n "))
+            print("\nIhr passender Stromtarif lautet:")
+            print("--------------------------------")
+            if verbrauch > 0 and verbrauch < 1500:
+                tarif = "radio-lightning"
+                radio_lightning()
+            elif verbrauch >= 1500 and verbrauch <= 3500:
+                tarif = "easy-green"
+                easy_green()
 
-    elif verbrauch >= 3501:
-        tarif = "electrical-short"
-        electrical_short()
-    print(tarif)
-    print("--------------------------------")
-    print("\nTarifdaten")
-    print("********************************")
-    print("Grundpreis/Jahr in Netto: " + str(Grundpreis_in_Netto) + " Euro.")
-    Grundpreis_in_Brutto = Grundpreis_in_Netto * (1 + MwSt)
-    print("Grundpreis/Jahr in Brutto: " +
-          str(Grundpreis_in_Brutto) + " Euro.")
-    print("\nArbeitspreis/kWh in Netto: " +
-          str(Arbeitspreis_in_Netto) + " Cent.")
-    Arbeitspreis_in_Brutto = Arbeitspreis_in_Netto * (1 + MwSt)
-    print("Arbeitspreis/kWh in Brutto: " +
-          str(Arbeitspreis_in_Brutto) + " Cent.")
-    print("\nIhre jährlichen Kosten")
-    print("**************************")
-    print("Ihr Jahresverbrauch: " + '{0:.1f}'.format(verbrauch) + " kWh")
-    print("Gesamtpreis (Netto): " + '{0:.13f}'.format(
-        Grundpreis_in_Netto + Arbeitspreis_in_Netto * verbrauch / 100) + " Euro")
-    print("Gesamtpreis (zzgl. 19% MwSt): " + '{0:.13f}'.format(
-        Grundpreis_in_Brutto + Arbeitspreis_in_Brutto * verbrauch / 100) + " Euro")
+            elif verbrauch >= 3501:
+                tarif = "electrical-short"
+                electrical_short()
+            else:
+                print("Gegeben negative Jahresstromverbrauch ist gar nicht gültig!")
+                break
+            print(tarif)
+            print("--------------------------------")
+            print("\nTarifdaten")
+            print("********************************")
+            print("Grundpreis/Jahr in Netto: " +
+                  str(Grundpreis_in_Netto) + " Euro.")
+            Grundpreis_in_Brutto = Grundpreis_in_Netto * (1 + MwSt)
+            print("Grundpreis/Jahr in Brutto: " +
+                  str(Grundpreis_in_Brutto) + " Euro.")
+            print("\nArbeitspreis/kWh in Netto: " +
+                  str(Arbeitspreis_in_Netto) + " Cent.")
+            Arbeitspreis_in_Brutto = Arbeitspreis_in_Netto * (1 + MwSt)
+            print("Arbeitspreis/kWh in Brutto: " +
+                  str(Arbeitspreis_in_Brutto) + " Cent.")
+            print("\nIhre jährlichen Kosten")
+            print("**************************")
+            print("Ihr Jahresverbrauch: " +
+                  '{0:.1f}'.format(verbrauch) + " kWh")
+            print("Gesamtpreis (Netto): " + '{0:.13f}'.format(
+                Grundpreis_in_Netto + Arbeitspreis_in_Netto * verbrauch / 100) + " Euro")
+            print("Gesamtpreis (zzgl. 19% MwSt): " + '{0:.13f}'.format(
+                Grundpreis_in_Brutto + Arbeitspreis_in_Brutto * verbrauch / 100) + " Euro")
+        except ValueError:
+            print("Could not convert string to float, please enter a valid value!\n")
+            break
+
+
 if __name__ == '__main__':
     main()
