@@ -24,11 +24,11 @@ def friday():
 
 
 def saturday():
-    print("Samstag\n" + "Die Mensa istgeschlossen!")
+    print("Samstag\n" + "Die Mensa ist geschlossen!")
 
 
 def sunday():
-    print("Sonntag\n" + "Die Mensa istgeschlossen!")
+    print("Sonntag\n" + "Die Mensa ist geschlossen!")
 
 
 def main():
@@ -44,9 +44,9 @@ def main():
 
             print("Menüplan für ", end='')
             switch[wochentag]()
+            break
         except KeyError:
             print("gültigen Wochentag soll nur von 1 bis 7 sein!")
-            break
 
 if __name__ == '__main__':
     main()

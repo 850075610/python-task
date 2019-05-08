@@ -25,13 +25,12 @@ def main():
             one = int(input("Bitte geben sie eine ganze, positive Zahl ein.\n "))
             other = int(
                 input("Bitte geben sie eine ganze, positive Zahl ein.\n "))
-
+            result = euclidean(one, other)
+        # print(result)
+            print("Ergebnis: " + str(result))
+            break
         except ValueError:
             print("Positive Nummer soll gegeben werden!")
-            break
-        result = euclidean(one, other)
-        print(result)
-        print("Ergebnis:" + str(result))
 
 if __name__ == '__main__':
     main()
