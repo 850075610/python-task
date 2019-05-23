@@ -26,11 +26,12 @@ def main():
             other = int(
                 input("Bitte geben sie eine ganze, positive Zahl ein.\n "))
             result = euclidean(one, other)
-        # print(result)
+            # print(result)
             print("Ergebnis: " + str(result))
             break
         except ValueError:
             print("Positive Nummer soll gegeben werden!")
-
+        except RecursionError:
+            print("Positive Nummer soll gegeben werden!")
 if __name__ == '__main__':
     main()
