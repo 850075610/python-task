@@ -18,7 +18,10 @@ if __name__ == '__main__':
     students = []
     ordinal = ['1st.', '2nd.', '3rd.']
     for i in range(2):
-        print("\nInformation for the " + ordinal[i] + " student: ")
+        if i < 3:
+            print("\nInformation for the " + ordinal[i] + " student: ")
+        else:
+            print("\nInformation for the " + str(i + 1) + "th" + " student: ")
         name = input("Please enter the surname: ")
         vorname = input("Please enter the first name: ")
         year, month, day = input(
