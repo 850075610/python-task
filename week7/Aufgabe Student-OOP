@@ -1,0 +1,12 @@
+Erstelle eine Python Konsolenanwendung mittels dem OOP-Prinzip. Ziel ist es, eine Anwendung zu schreiben die eine Klasse namens Student (oder auch Studierender … was dir lieber ist :p) enthält.
+
+Die Klasse soll dabei mehrere Informationen beinhalten:
+
+Name
+Vorname
+Geburtsdatum
+Studiengang
+Matrikelnummer
+Die Klasse soll dabei nun zwei Objekte beinhalten. Zu einem dich selbst und eine (fiktive) Person deiner Wahl.
+
+Bonus: Die Eingabe der Objekt-Daten soll durch den Nutzer erfolgen.
