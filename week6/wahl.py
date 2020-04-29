@@ -33,7 +33,7 @@ def spezifisch():
         'Ist dir die Partei wichtig? [Ja/Nein, alle Nicht \'Ja\' Eingaben werden als \'Nein\' gewertet.]\n') == 'Ja' else False
     # print(partei_wichtig)
 
-    # If pass sys.argv[1] as parameter, then have to check is this parameter
+    # If pass sys.argv[1] as parameter, then have to check if this parameter
     # is given
     df = pd.read_csv('Europawahlzettel.csv')
     partei_list = df['Partei'].drop_duplicates(
