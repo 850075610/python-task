@@ -1,14 +1,14 @@
 class Boot:
     """docstring for Boot"""
 
-    def __init__(self, Bootsnummer, Bootsnamen, Leisung, type):
+    def __init__(self, Bootsnummer, Bootsnamen, Leistung, type):
         self.Bootsnummer = Bootsnummer
         self.Bootsnamen = Bootsnamen
-        self.Leisung = Leisung
+        self.Leistung = Leistung
         self.type = type
 
     def __str__(self):
-        return f"\n\nBootszulassung\n******************\nName = {self.type}{self.Bootsnamen}\nNummer = {self.Bootsnummer}\nMotorleistung = {self.Leisung}"
+        return f"\n\nBootszulassung\n******************\nName = {self.type}{self.Bootsnamen}\nNummer = {self.Bootsnummer}\nMotorleistung = {self.Leistung}"
 
 
 if __name__ == '__main__':

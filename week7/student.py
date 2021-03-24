@@ -26,7 +26,12 @@ if __name__ == '__main__':
         vorname = input("Please enter the first name: ")
         year, month, day = input(
             "Please enter the date of birth in the order of year, month and day separated by a space: ").split(" ")
-        geburtsdatum = datetime.datetime((int)(year), (int)(month), (int)(day))
+        try:
+            geburtsdatum = datetime.datetime(int(year), int(month), int(day))
+        except ValueError:
+            print(
+                "Please enter valid date of birth next time, when invalid date is given, default date of birth is set to today!")
+            geburtsdatum = datetime.datetime.now()
         studiengang = input("Please enter the course of studies: ")
         matrikelnummer = input("Please enter the matriculation number: ")
         students.append(Student(name, vorname, geburtsdatum, studiengang, matrikelnummer))
